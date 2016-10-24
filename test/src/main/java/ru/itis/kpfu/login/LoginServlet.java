@@ -1,5 +1,7 @@
 package ru.itis.kpfu.login;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +16,10 @@ import java.sql.*;
 
 public class LoginServlet extends HttpServlet {
     ResultSet rs = null;
-
+    public static String md5Apache(String st) {
+        String md5Hex = DigestUtils.md5Hex(st);
+        return md5Hex;
+    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
@@ -43,16 +48,17 @@ public class LoginServlet extends HttpServlet {
 
         try {
             if (rs.next()) {
-//                if (password.equals(rs.getString("password"))) {
-//                    request.getSession().setAttribute("current_user", username);
-//                    response.sendRedirect("/profile");
-//
-//                }
-                if ("admin".equals(username) && "123".equals(password)) {
-                    request.getSession().setAttribute("session_uname", username);
+                String salt = md5Apache(password);
+                if (password.equals(rs.getString("salt"))) {
+                    request.getSession().setAttribute("current_user", username);
                     response.sendRedirect("/profile");
 
                 }
+//                if ("admin".equals(username) && "123".equals(password)) {
+//                    request.getSession().setAttribute("session_uname", username);
+//                    response.sendRedirect("/profile");
+//
+//                }
                 else {
                     request.setAttribute("error", true);
                     getServletConfig().getServletContext().getRequestDispatcher("/login.ftl").forward(request, response);
