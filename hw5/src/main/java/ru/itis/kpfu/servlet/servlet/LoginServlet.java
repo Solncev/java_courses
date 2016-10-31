@@ -34,12 +34,12 @@ public class LoginServlet extends HttpServlet {
             Connection connection= conFactory.getConnection();
             PreparedStatement preparedStatement = null;
             preparedStatement = connection.prepareStatement(
-                    "SELECT * FROM credentials where password = ? and login = ?");
+                    "SELECT * FROM credentials where salt = ? and login = ?");
             preparedStatement.setString(1, salt);
             preparedStatement.setString(2, username);
-            ResultSet result2 = preparedStatement.executeQuery();
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            if (result2.next()) {
+            if (resultSet.next()) {
                 isUserExists = true;
             }
             if(isUserExists){
