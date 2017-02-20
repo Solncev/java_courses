@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.solncev.entity.impl.Shield" id="shield">
+        <constructor-arg value="wood"/>
+    </bean>
+    <bean class="com.solncev.entity.impl.Bow" id="bow">
+        <property name="damage" value="10"/>
+    </bean>
+    <bean class="com.solncev.entity.impl.Archer" id="archer">
+        <property name="armor" ref="shield"/>
+        <property name="health" value="100"/>
+        <property name="weapon" ref="bow"/>
+    </bean>
+</beans>
