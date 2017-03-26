@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Bow implements Weapon {
-    private int damage;
+    private int damage = 10;
 
     public void attack() {
         System.out.println("attack");

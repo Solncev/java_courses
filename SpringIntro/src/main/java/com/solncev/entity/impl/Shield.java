@@ -8,11 +8,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Shield implements Armor {
-    private String material;
-
-    public Shield(String material) {
-        this.material = material;
-    }
+    private String material = "f";
 
     public void toProtect() {
         System.out.println("protect");

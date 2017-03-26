@@ -11,11 +11,16 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Archer implements Warrior {
-    @Autowired
+
     private Armor armor;
-    @Autowired
     private Weapon weapon;
-    private int health;
+    private int health = 100;
+
+    @Autowired
+    public Archer(Armor armor, Weapon weapon) {
+        this.armor = armor;
+        this.weapon = weapon;
+    }
 
     public void attack() {
         System.out.print("archer ");
