@@ -54,7 +54,7 @@ public class UsersController {
     TODO: обработать форму авторизации. Использовать метод findByNickname у userService.
     При авторизации нужно положить session_uid в сессию, для маяка, что пользователь уже авторизован
      */
-    @RequestMapping(value = "/login")
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login() {
         User user = usersService.findByNickname(request.getParameter("nickname"));
         if (encoder.matches(request.getParameter("password"), user.getPassword())) {
