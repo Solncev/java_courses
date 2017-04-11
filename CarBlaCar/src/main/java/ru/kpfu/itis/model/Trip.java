@@ -1,18 +1,23 @@
 package ru.kpfu.itis.model;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+import ru.kpfu.itis.forms.TripForm;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 
 @Entity
-@Table(name = "trips", schema = "public", catalog = "carcarbla")
+@Table(name = "trips")
 public class Trip {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "passengers_trips", joinColumns = @JoinColumn(name = "trip_id"), inverseJoinColumns =
     @JoinColumn(name = "passenger_id"))
     List<Passenger> passengers;
     @OneToMany(mappedBy = "trip")
+    @LazyCollection(LazyCollectionOption.FALSE)
     List<Booking> bookings;
     @OneToMany(mappedBy = "trip")
     List<Review> reviews;
@@ -36,7 +41,10 @@ public class Trip {
     private String info; //информация и доп. условия
 
     public Trip() {
+    }
 
+    public Trip(TripForm tripForm) {
+//        this.auto = tripForm.getAuto();
     }
 
     public Trip(Driver driver, Automobile auto, String departure, String destination, Date date, int price, int count, String status, String info) {

@@ -51,14 +51,14 @@
 
     <hr>
 
-    <form action="/newtrip" method="POST">
+    <form name="trip" action="/newtrip" method="POST">
         <div class="form-group row">
             <label for="auto" class="col-sm-2 col-form-label">Автомобиль</label>
             <div class="col-sm-10">
                 <select class="form-control select2" style="width: 100%;" name="auto">
                     <option selected="selected"></option>
-                <#list automobileList as auto>
-                    <option>${auto.id} - ${auto.brand} ${auto.model} </option>
+                <#list user.driver.automobileList as auto>
+                    <option value="${auto.id}">${auto.brand} ${auto.model} </option>
                 </#list>
                 </select>
             </div>
@@ -122,6 +122,14 @@
                 <button type="submit" class="btn btn-primary">Предложить поездку</button>
             </div>
         </div>
+
+    <#if errors??>
+        <#list errors as error>
+            <div class="alert alert-danger">
+                <strong>${error.defaultMessage}</strong>
+            </div>
+        </#list>
+    </#if>
 
 
     </form>

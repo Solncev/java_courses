@@ -8,24 +8,19 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "drivers", schema = "public", catalog = "carcarbla")
+@Table(name = "drivers")
 public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "driver_id_generator")
     @SequenceGenerator(name = "driver_id_generator", sequenceName = "drivers_id_seq")
     private Long id;
-
     private int experience;
-
     private int rating;
-
     @OneToOne(targetEntity = User.class)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
-
     @OneToMany(targetEntity = Automobile.class, mappedBy = "driver", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Automobile> automobileList;
-
     @OneToMany(mappedBy = "driver")
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Trip> trips;

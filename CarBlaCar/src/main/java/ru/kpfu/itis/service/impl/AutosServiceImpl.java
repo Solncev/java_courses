@@ -1,31 +1,33 @@
 package ru.kpfu.itis.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.kpfu.itis.dao.AutosDao;
+import org.springframework.stereotype.Service;
 import ru.kpfu.itis.model.Automobile;
+import ru.kpfu.itis.repository.AutosRepository;
 import ru.kpfu.itis.service.AutosService;
 
 import java.util.List;
 
+@Service
 public class AutosServiceImpl implements AutosService {
 
     @Autowired
-    private AutosDao autosDao;
+    private AutosRepository autosRepository;
 
     public Automobile addAuto(Automobile automobile) {
-        autosDao.save(automobile);
+        autosRepository.save(automobile);
         return automobile;
     }
 
     public void update(Automobile automobile) {
-        autosDao.save(automobile);
+        autosRepository.save(automobile);
     }
 
     public List<Automobile> findAll() {
-        return autosDao.findAll();
+        return autosRepository.findAll();
     }
 
     public Automobile findById(Long id) {
-        return autosDao.findOne(id);
+        return autosRepository.findOne(id);
     }
 }

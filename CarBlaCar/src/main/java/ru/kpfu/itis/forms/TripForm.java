@@ -1,10 +1,23 @@
 package ru.kpfu.itis.forms;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
+import ru.kpfu.itis.model.Automobile;
+
+import javax.validation.constraints.Future;
+import java.util.Date;
+
 public class TripForm {
-    private String auto;
+    private Automobile auto;
+    @NotEmpty(message = "Нужно указать место отправления")
     private String departure;
+    @NotEmpty(message = "Нужно указать место прибытия")
     private String destination;
-    private String date;
+    //TODO: реализовать аннотацию, которая проверяет,
+    // что указанная дата не раньше текущего момента времени
+    @DateTimeFormat(pattern = "dd.MM.yyyy HH:mm")
+    @Future(message = "Увы, но вы не можете отправиться в прошлое")
+    private Date date;
     private int price;
     private int count; //количество пассажиров
     private String info; //информация и доп. условия
@@ -13,11 +26,11 @@ public class TripForm {
 
     }
 
-    public String getAuto() {
+    public Automobile getAuto() {
         return auto;
     }
 
-    public void setAuto(String auto) {
+    public void setAuto(Automobile auto) {
         this.auto = auto;
     }
 
@@ -37,11 +50,11 @@ public class TripForm {
         this.destination = destination;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

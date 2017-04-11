@@ -8,8 +8,8 @@ public class JDBCConnectionFactory {
     private static JDBCConnectionFactory connectionFactory = null;
     private final String driverClassName = "org.postgresql.Driver";
     private final String connectionUrl = "jdbc:postgresql://localhost:5432/carblacar";
-    private final String dbUser = "practice";
-    private final String dbPwd = "123";
+    private final String dbUser = "postgres";
+    private final String dbPwd = "postgres";
 
     private JDBCConnectionFactory() {
         try {

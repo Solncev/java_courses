@@ -5,7 +5,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "autos", schema = "public", catalog = "carcarbla")
+@Table(name = "autos")
 public class Automobile {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "auto_id_generator")
@@ -31,6 +31,10 @@ public class Automobile {
         this.licensePlate = licensePlate;
         this.age = age;
         this.driver = driver;
+    }
+
+    public Automobile(Long id) {
+        this.id = id;
     }
 
 

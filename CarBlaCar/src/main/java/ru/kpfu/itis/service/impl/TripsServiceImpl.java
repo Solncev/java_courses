@@ -1,47 +1,59 @@
 package ru.kpfu.itis.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.kpfu.itis.dao.TripsDao;
+import org.springframework.data.jpa.domain.Specifications;
+import org.springframework.stereotype.Service;
 import ru.kpfu.itis.model.Trip;
+import ru.kpfu.itis.model.User;
+import ru.kpfu.itis.model.specs.TripSpecs;
+import ru.kpfu.itis.repository.TripsRepository;
 import ru.kpfu.itis.service.TripsService;
 
+import java.util.Date;
 import java.util.List;
 
+@Service
 public class TripsServiceImpl implements TripsService {
 
     @Autowired
-    TripsDao tripsDao;
+    TripsRepository tripsRepository;
 
     public Trip addTrip(Trip trip) {
-        tripsDao.save(trip);
+        tripsRepository.save(trip);
         return trip;
     }
 
     public void update(Trip trip) {
-        tripsDao.save(trip);
+        tripsRepository.save(trip);
     }
 
     public List<Trip> findAll() {
-        return tripsDao.findAll();
+        return (List<Trip>) tripsRepository.findAll();
     }
 
     public List<Trip> findAllOrderDate() {
-        return tripsDao.findAllByOrderByDateDesc();
+        return tripsRepository.findAllByOrderByDateDesc();
     }
 
     public List<Trip> findByStatusOrderDate() {
-        return tripsDao.findByStatusOrderByDateDesc("Ожидание");
+        return tripsRepository.findByStatusOrderByDateDesc("Ожидание");
     }
 
     public List<Trip> findBySearch(String departure, String destination) {
-        return tripsDao.findByDepartureAndDestinationOrderByDateDesc(departure, destination);
+        return tripsRepository.findByDepartureAndDestinationOrderByDateDesc(departure, destination);
     }
 
     public Trip findById(Long id) {
-        return tripsDao.findOne(id);
+        return tripsRepository.findOne(id);
     }
 
     public List<Trip> lastTrips() {
-        return tripsDao.findTop10ByOrderByDateDesc();
+        return tripsRepository.findTop10ByOrderByDateDesc();
+    }
+
+    @Override
+    public List<Trip> lastEndsTripsForMonth(User user) {
+        Date currentDate = new Date();
+        return tripsRepository.findAll(Specifications.where(TripSpecs.checkParams(user, currentDate)));
     }
 }

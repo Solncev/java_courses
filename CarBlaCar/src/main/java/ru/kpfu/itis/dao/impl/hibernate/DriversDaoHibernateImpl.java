@@ -2,7 +2,6 @@ package ru.kpfu.itis.dao.impl.hibernate;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
-import org.hibernate.criterion.Order;
 import ru.kpfu.itis.dao.DriversDao;
 import ru.kpfu.itis.dao.factory.HibernateConnectionFactory;
 import ru.kpfu.itis.model.Driver;
@@ -55,20 +54,6 @@ public class DriversDaoHibernateImpl implements DriversDao {
 
     @Override
     public List<Driver> findTop9ByOrderByRatingDesc() {
-//        TODO: реализовать метод
-        Session session = null;
-        List drivers = new ArrayList();
-        try {
-            session = HibernateConnectionFactory.getSessionFactory().openSession();
-            drivers = session.createCriteria(Driver.class).addOrder(Order.desc("rating"))
-                    .setMaxResults(9).list();
-        } catch (Exception e) {
-            logger.error("error finding top 9 driver by Hibernate", e.getCause());
-        } finally {
-            if (session != null && session.isOpen()) {
-                session.close();
-            }
-        }
-        return drivers;
+        return null;
     }
 }

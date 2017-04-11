@@ -1,6 +1,7 @@
 package ru.kpfu.itis.service;
 
 import ru.kpfu.itis.model.Trip;
+import ru.kpfu.itis.model.User;
 
 import java.util.List;
 
@@ -21,4 +22,8 @@ public interface TripsService {
     Trip findById(Long id);
 
     List<Trip> lastTrips();
+
+    List<Trip> lastEndsTripsForMonth(User user);
+
+
 }
