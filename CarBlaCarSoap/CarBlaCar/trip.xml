@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<trip>
+    <id>1</id>
+    <driver>
+        <experience>0</experience>
+        <rating>0</rating>
+    </driver>
+    <auto>
+        <age>0</age>
+    </auto>
+    <price>0</price>
+    <count>0</count>
+</trip>
