@@ -1,3 +1,4 @@
+import cxf.Automobile;
 import cxf.Trip;
 import cxf.TripsService;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
@@ -15,7 +16,8 @@ public class TestWs {
 
         TripsService tripService = (TripsService) factoryBean.create();
 
-        List<Trip> result = tripService.findAll();
+        List<Trip> result = tripService.findByAuto(new Automobile());
+//        List<Trip> result = tripService.findAll();
         for (Trip trip : result) {
             System.out.println("trip id = " + trip.getId());
         }

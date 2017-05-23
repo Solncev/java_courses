@@ -24,25 +24,27 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _FindBySearchResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findBySearchResponse");
-    private final static QName _FindById_QNAME = new QName("http://service.itis.kpfu.ru/", "findById");
-    private final static QName _UpdateResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "updateResponse");
-    private final static QName _AddTripResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "addTripResponse");
     private final static QName _Trip_QNAME = new QName("http://service.itis.kpfu.ru/", "trip");
-    private final static QName _LastTripsResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "lastTripsResponse");
-    private final static QName _FindAllOrderDateResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findAllOrderDateResponse");
-    private final static QName _FindAllResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findAllResponse");
-    private final static QName _LastTrips_QNAME = new QName("http://service.itis.kpfu.ru/", "lastTrips");
-    private final static QName _AddTrip_QNAME = new QName("http://service.itis.kpfu.ru/", "addTrip");
-    private final static QName _LastEndsTripsForMonth_QNAME = new QName("http://service.itis.kpfu.ru/", "lastEndsTripsForMonth");
+    private final static QName _FindByAuto_QNAME = new QName("http://service.itis.kpfu.ru/", "findByAuto");
+    private final static QName _AddTripResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "addTripResponse");
+    private final static QName _FindByAutoResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findByAutoResponse");
+    private final static QName _FindById_QNAME = new QName("http://service.itis.kpfu.ru/", "findById");
     private final static QName _FindByIdResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findByIdResponse");
-    private final static QName _Update_QNAME = new QName("http://service.itis.kpfu.ru/", "update");
-    private final static QName _FindBySearch_QNAME = new QName("http://service.itis.kpfu.ru/", "findBySearch");
+    private final static QName _FindAllResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findAllResponse");
     private final static QName _FindByStatusOrderDate_QNAME = new QName("http://service.itis.kpfu.ru/", "findByStatusOrderDate");
-    private final static QName _FindAll_QNAME = new QName("http://service.itis.kpfu.ru/", "findAll");
-    private final static QName _FindAllOrderDate_QNAME = new QName("http://service.itis.kpfu.ru/", "findAllOrderDate");
+    private final static QName _UpdateResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "updateResponse");
+    private final static QName _LastTrips_QNAME = new QName("http://service.itis.kpfu.ru/", "lastTrips");
     private final static QName _FindByStatusOrderDateResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findByStatusOrderDateResponse");
     private final static QName _LastEndsTripsForMonthResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "lastEndsTripsForMonthResponse");
+    private final static QName _FindBySearchResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findBySearchResponse");
+    private final static QName _FindBySearch_QNAME = new QName("http://service.itis.kpfu.ru/", "findBySearch");
+    private final static QName _LastEndsTripsForMonth_QNAME = new QName("http://service.itis.kpfu.ru/", "lastEndsTripsForMonth");
+    private final static QName _FindAllOrderDateResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "findAllOrderDateResponse");
+    private final static QName _FindAllOrderDate_QNAME = new QName("http://service.itis.kpfu.ru/", "findAllOrderDate");
+    private final static QName _Update_QNAME = new QName("http://service.itis.kpfu.ru/", "update");
+    private final static QName _LastTripsResponse_QNAME = new QName("http://service.itis.kpfu.ru/", "lastTripsResponse");
+    private final static QName _FindAll_QNAME = new QName("http://service.itis.kpfu.ru/", "findAll");
+    private final static QName _AddTrip_QNAME = new QName("http://service.itis.kpfu.ru/", "addTrip");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: cxf
@@ -60,59 +62,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Update }
+     * Create an instance of {@link LastEndsTripsForMonthResponse }
      * 
      */
-    public Update createUpdate() {
-        return new Update();
-    }
-
-    /**
-     * Create an instance of {@link FindBySearch }
-     * 
-     */
-    public FindBySearch createFindBySearch() {
-        return new FindBySearch();
-    }
-
-    /**
-     * Create an instance of {@link FindByStatusOrderDate }
-     * 
-     */
-    public FindByStatusOrderDate createFindByStatusOrderDate() {
-        return new FindByStatusOrderDate();
-    }
-
-    /**
-     * Create an instance of {@link LastEndsTripsForMonth }
-     * 
-     */
-    public LastEndsTripsForMonth createLastEndsTripsForMonth() {
-        return new LastEndsTripsForMonth();
-    }
-
-    /**
-     * Create an instance of {@link FindByIdResponse }
-     * 
-     */
-    public FindByIdResponse createFindByIdResponse() {
-        return new FindByIdResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindAll }
-     * 
-     */
-    public FindAll createFindAll() {
-        return new FindAll();
-    }
-
-    /**
-     * Create an instance of {@link FindAllOrderDate }
-     * 
-     */
-    public FindAllOrderDate createFindAllOrderDate() {
-        return new FindAllOrderDate();
+    public LastEndsTripsForMonthResponse createLastEndsTripsForMonthResponse() {
+        return new LastEndsTripsForMonthResponse();
     }
 
     /**
@@ -124,11 +78,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LastEndsTripsForMonthResponse }
+     * Create an instance of {@link FindAllOrderDateResponse }
      * 
      */
-    public LastEndsTripsForMonthResponse createLastEndsTripsForMonthResponse() {
-        return new LastEndsTripsForMonthResponse();
+    public FindAllOrderDateResponse createFindAllOrderDateResponse() {
+        return new FindAllOrderDateResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindBySearch }
+     * 
+     */
+    public FindBySearch createFindBySearch() {
+        return new FindBySearch();
+    }
+
+    /**
+     * Create an instance of {@link LastEndsTripsForMonth }
+     * 
+     */
+    public LastEndsTripsForMonth createLastEndsTripsForMonth() {
+        return new LastEndsTripsForMonth();
     }
 
     /**
@@ -140,51 +110,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddTripResponse }
+     * Create an instance of {@link FindAllOrderDate }
      * 
      */
-    public AddTripResponse createAddTripResponse() {
-        return new AddTripResponse();
+    public FindAllOrderDate createFindAllOrderDate() {
+        return new FindAllOrderDate();
     }
 
     /**
-     * Create an instance of {@link UpdateResponse }
+     * Create an instance of {@link Update }
      * 
      */
-    public UpdateResponse createUpdateResponse() {
-        return new UpdateResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindById }
-     * 
-     */
-    public FindById createFindById() {
-        return new FindById();
-    }
-
-    /**
-     * Create an instance of {@link LastTripsResponse }
-     * 
-     */
-    public LastTripsResponse createLastTripsResponse() {
-        return new LastTripsResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindAllOrderDateResponse }
-     * 
-     */
-    public FindAllOrderDateResponse createFindAllOrderDateResponse() {
-        return new FindAllOrderDateResponse();
-    }
-
-    /**
-     * Create an instance of {@link LastTrips }
-     * 
-     */
-    public LastTrips createLastTrips() {
-        return new LastTrips();
+    public Update createUpdate() {
+        return new Update();
     }
 
     /**
@@ -196,11 +134,99 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FindAll }
+     * 
+     */
+    public FindAll createFindAll() {
+        return new FindAll();
+    }
+
+    /**
+     * Create an instance of {@link LastTripsResponse }
+     * 
+     */
+    public LastTripsResponse createLastTripsResponse() {
+        return new LastTripsResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddTripResponse }
+     * 
+     */
+    public AddTripResponse createAddTripResponse() {
+        return new AddTripResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindByAutoResponse }
+     * 
+     */
+    public FindByAutoResponse createFindByAutoResponse() {
+        return new FindByAutoResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindByAuto }
+     * 
+     */
+    public FindByAuto createFindByAuto() {
+        return new FindByAuto();
+    }
+
+    /**
+     * Create an instance of {@link FindById }
+     * 
+     */
+    public FindById createFindById() {
+        return new FindById();
+    }
+
+    /**
+     * Create an instance of {@link FindByIdResponse }
+     * 
+     */
+    public FindByIdResponse createFindByIdResponse() {
+        return new FindByIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindByStatusOrderDate }
+     * 
+     */
+    public FindByStatusOrderDate createFindByStatusOrderDate() {
+        return new FindByStatusOrderDate();
+    }
+
+    /**
      * Create an instance of {@link FindAllResponse }
      * 
      */
     public FindAllResponse createFindAllResponse() {
         return new FindAllResponse();
+    }
+
+    /**
+     * Create an instance of {@link LastTrips }
+     * 
+     */
+    public LastTrips createLastTrips() {
+        return new LastTrips();
+    }
+
+    /**
+     * Create an instance of {@link UpdateResponse }
+     * 
+     */
+    public UpdateResponse createUpdateResponse() {
+        return new UpdateResponse();
+    }
+
+    /**
+     * Create an instance of {@link Booking }
+     * 
+     */
+    public Booking createBooking() {
+        return new Booking();
     }
 
     /**
@@ -212,19 +238,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Review }
+     * 
+     */
+    public Review createReview() {
+        return new Review();
+    }
+
+    /**
      * Create an instance of {@link Driver }
      * 
      */
     public Driver createDriver() {
         return new Driver();
-    }
-
-    /**
-     * Create an instance of {@link Booking }
-     * 
-     */
-    public Booking createBooking() {
-        return new Booking();
     }
 
     /**
@@ -244,55 +270,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Review }
-     * 
-     */
-    public Review createReview() {
-        return new Review();
-    }
-
-    /**
      * Create an instance of {@link Trip.Passengers }
      * 
      */
     public Trip.Passengers createTripPassengers() {
         return new Trip.Passengers();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindBySearchResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findBySearchResponse")
-    public JAXBElement<FindBySearchResponse> createFindBySearchResponse(FindBySearchResponse value) {
-        return new JAXBElement<FindBySearchResponse>(_FindBySearchResponse_QNAME, FindBySearchResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindById }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findById")
-    public JAXBElement<FindById> createFindById(FindById value) {
-        return new JAXBElement<FindById>(_FindById_QNAME, FindById.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "updateResponse")
-    public JAXBElement<UpdateResponse> createUpdateResponse(UpdateResponse value) {
-        return new JAXBElement<UpdateResponse>(_UpdateResponse_QNAME, UpdateResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddTripResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "addTripResponse")
-    public JAXBElement<AddTripResponse> createAddTripResponse(AddTripResponse value) {
-        return new JAXBElement<AddTripResponse>(_AddTripResponse_QNAME, AddTripResponse.class, null, value);
     }
 
     /**
@@ -305,57 +287,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LastTripsResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindByAuto }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "lastTripsResponse")
-    public JAXBElement<LastTripsResponse> createLastTripsResponse(LastTripsResponse value) {
-        return new JAXBElement<LastTripsResponse>(_LastTripsResponse_QNAME, LastTripsResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findByAuto")
+    public JAXBElement<FindByAuto> createFindByAuto(FindByAuto value) {
+        return new JAXBElement<FindByAuto>(_FindByAuto_QNAME, FindByAuto.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllOrderDateResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddTripResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAllOrderDateResponse")
-    public JAXBElement<FindAllOrderDateResponse> createFindAllOrderDateResponse(FindAllOrderDateResponse value) {
-        return new JAXBElement<FindAllOrderDateResponse>(_FindAllOrderDateResponse_QNAME, FindAllOrderDateResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "addTripResponse")
+    public JAXBElement<AddTripResponse> createAddTripResponse(AddTripResponse value) {
+        return new JAXBElement<AddTripResponse>(_AddTripResponse_QNAME, AddTripResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindByAutoResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAllResponse")
-    public JAXBElement<FindAllResponse> createFindAllResponse(FindAllResponse value) {
-        return new JAXBElement<FindAllResponse>(_FindAllResponse_QNAME, FindAllResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findByAutoResponse")
+    public JAXBElement<FindByAutoResponse> createFindByAutoResponse(FindByAutoResponse value) {
+        return new JAXBElement<FindByAutoResponse>(_FindByAutoResponse_QNAME, FindByAutoResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LastTrips }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindById }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "lastTrips")
-    public JAXBElement<LastTrips> createLastTrips(LastTrips value) {
-        return new JAXBElement<LastTrips>(_LastTrips_QNAME, LastTrips.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddTrip }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "addTrip")
-    public JAXBElement<AddTrip> createAddTrip(AddTrip value) {
-        return new JAXBElement<AddTrip>(_AddTrip_QNAME, AddTrip.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LastEndsTripsForMonth }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "lastEndsTripsForMonth")
-    public JAXBElement<LastEndsTripsForMonth> createLastEndsTripsForMonth(LastEndsTripsForMonth value) {
-        return new JAXBElement<LastEndsTripsForMonth>(_LastEndsTripsForMonth_QNAME, LastEndsTripsForMonth.class, null, value);
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findById")
+    public JAXBElement<FindById> createFindById(FindById value) {
+        return new JAXBElement<FindById>(_FindById_QNAME, FindById.class, null, value);
     }
 
     /**
@@ -368,21 +332,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Update }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "update")
-    public JAXBElement<Update> createUpdate(Update value) {
-        return new JAXBElement<Update>(_Update_QNAME, Update.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindBySearch }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findBySearch")
-    public JAXBElement<FindBySearch> createFindBySearch(FindBySearch value) {
-        return new JAXBElement<FindBySearch>(_FindBySearch_QNAME, FindBySearch.class, null, value);
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAllResponse")
+    public JAXBElement<FindAllResponse> createFindAllResponse(FindAllResponse value) {
+        return new JAXBElement<FindAllResponse>(_FindAllResponse_QNAME, FindAllResponse.class, null, value);
     }
 
     /**
@@ -395,21 +350,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindAll }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAll")
-    public JAXBElement<FindAll> createFindAll(FindAll value) {
-        return new JAXBElement<FindAll>(_FindAll_QNAME, FindAll.class, null, value);
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "updateResponse")
+    public JAXBElement<UpdateResponse> createUpdateResponse(UpdateResponse value) {
+        return new JAXBElement<UpdateResponse>(_UpdateResponse_QNAME, UpdateResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllOrderDate }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LastTrips }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAllOrderDate")
-    public JAXBElement<FindAllOrderDate> createFindAllOrderDate(FindAllOrderDate value) {
-        return new JAXBElement<FindAllOrderDate>(_FindAllOrderDate_QNAME, FindAllOrderDate.class, null, value);
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "lastTrips")
+    public JAXBElement<LastTrips> createLastTrips(LastTrips value) {
+        return new JAXBElement<LastTrips>(_LastTrips_QNAME, LastTrips.class, null, value);
     }
 
     /**
@@ -428,6 +383,87 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "lastEndsTripsForMonthResponse")
     public JAXBElement<LastEndsTripsForMonthResponse> createLastEndsTripsForMonthResponse(LastEndsTripsForMonthResponse value) {
         return new JAXBElement<LastEndsTripsForMonthResponse>(_LastEndsTripsForMonthResponse_QNAME, LastEndsTripsForMonthResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindBySearchResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findBySearchResponse")
+    public JAXBElement<FindBySearchResponse> createFindBySearchResponse(FindBySearchResponse value) {
+        return new JAXBElement<FindBySearchResponse>(_FindBySearchResponse_QNAME, FindBySearchResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindBySearch }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findBySearch")
+    public JAXBElement<FindBySearch> createFindBySearch(FindBySearch value) {
+        return new JAXBElement<FindBySearch>(_FindBySearch_QNAME, FindBySearch.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LastEndsTripsForMonth }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "lastEndsTripsForMonth")
+    public JAXBElement<LastEndsTripsForMonth> createLastEndsTripsForMonth(LastEndsTripsForMonth value) {
+        return new JAXBElement<LastEndsTripsForMonth>(_LastEndsTripsForMonth_QNAME, LastEndsTripsForMonth.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllOrderDateResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAllOrderDateResponse")
+    public JAXBElement<FindAllOrderDateResponse> createFindAllOrderDateResponse(FindAllOrderDateResponse value) {
+        return new JAXBElement<FindAllOrderDateResponse>(_FindAllOrderDateResponse_QNAME, FindAllOrderDateResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllOrderDate }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAllOrderDate")
+    public JAXBElement<FindAllOrderDate> createFindAllOrderDate(FindAllOrderDate value) {
+        return new JAXBElement<FindAllOrderDate>(_FindAllOrderDate_QNAME, FindAllOrderDate.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Update }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "update")
+    public JAXBElement<Update> createUpdate(Update value) {
+        return new JAXBElement<Update>(_Update_QNAME, Update.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LastTripsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "lastTripsResponse")
+    public JAXBElement<LastTripsResponse> createLastTripsResponse(LastTripsResponse value) {
+        return new JAXBElement<LastTripsResponse>(_LastTripsResponse_QNAME, LastTripsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAll }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "findAll")
+    public JAXBElement<FindAll> createFindAll(FindAll value) {
+        return new JAXBElement<FindAll>(_FindAll_QNAME, FindAll.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddTrip }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.itis.kpfu.ru/", name = "addTrip")
+    public JAXBElement<AddTrip> createAddTrip(AddTrip value) {
+        return new JAXBElement<AddTrip>(_AddTrip_QNAME, AddTrip.class, null, value);
     }
 
 }
